@@ -7,4 +7,5 @@ USER            roboshop
 COPY            src/ /app/src/
 COPY            pom.xml /app/pom.xml
 RUN             mvn clean package
-ENTRYPOINT      ["java", "-jar", "/app/target/shipping-1.0.jar"]
+COPY            newrelic/ /app/newrelic/
+ENTRYPOINT      ["bash", "/app/run.sh"]
