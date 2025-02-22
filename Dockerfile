@@ -11,6 +11,7 @@ RUN             mvn clean package
 
 FROM            redhat/ubi9
 RUN             dnf install java-17-openjdk -y
+RUN             dnf clean all
 RUN             mkdir /app
 RUN             useradd -d /app roboshop
 WORKDIR         /app
