@@ -10,6 +10,8 @@ jobs:
     uses: tejadevsecops/github-reusable-actions/.github/workflows/ci-main.yml@main
     with:
       componentName: shipping
+    secrets:
+      NR_API_KEY: ${{ secrets.NR_API_KEY }}
 #      SONAR_CLASS_PATH: "-Dsonar.java.binaries=target"
 #    secrets:
 #      VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
